@@ -1,0 +1,17 @@
+:root {
+  --bg-color: #000;
+  --text-color: #3b3e45;
+  --text-secondary: #fff;
+
+  --gray-600: #666e7d;
+  --gray-400: #dcdfe3;
+  --gray-100: #fff;
+
+  --danger: #98031e;
+  --blue: #6688ff;
+
+  --text-heading1: 2.5rem; /* 40px */
+  --text-strong2: 1.375rem; /* 22px */
+  --text-strong1: 1.25rem; /* 20px */
+  --text-text1: 0.875rem; /* 14px */
+}
