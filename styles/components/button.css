@@ -1,0 +1,13 @@
+.button {
+  padding: 0.625rem 0.875rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.button--accept {
+  background-color: var(--accept);
+}
+
+.button--danger {
+  background-color: var(--danger);
+}
