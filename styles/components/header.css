@@ -4,11 +4,11 @@
   align-items: center;
   padding: 2rem;
   padding-left: 0;
-  border: 1px solid white;
 
   border-radius: 35px;
 
   overflow: hidden;
+  background-color: var(--bg-color);
 }
 
 .header__title {
