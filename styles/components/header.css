@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  padding-left: 0;
+  border: 1px solid black;
+
+  border-radius: 35px;
+
+  overflow: hidden;
+}
+
+.header__title {
+  background-color: var(--blue);
+  color: var(--text-secondary);
+  border-radius: 0px 14px 15px 0px;
+  padding: 0.75rem;
+  width: 40%;
+}
+
+.header__title h1 {
+  font-size: var(--text-strong2);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.header__time {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header__time > strong {
+  font-size: var(--text-heading1);
+}
+
+.header__time > p {
+  font-size: var(--text-strong);
+}
