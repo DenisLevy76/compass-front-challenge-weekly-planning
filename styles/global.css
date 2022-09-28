@@ -3,9 +3,16 @@
 
 @import url(components/header.css);
 @import url(components/button.css);
+@import url(components/input.css);
 
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--text-color);
   background-color: var(--bg-secondary-color);
+
+  background-image: url(../assets/images/compassLogo.png);
+  background-repeat: no-repeat;
+  background-position: 130% 250%;
+
+  height: 100vh;
 }
