@@ -25,6 +25,11 @@
   margin-bottom: 6px;
 }
 
+.header__buttons {
+  display: flex;
+  gap: 1rem;
+}
+
 .header__time {
   display: flex;
   flex-direction: column;
