@@ -23,6 +23,12 @@ body {
   height: 100vh;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 /* width */
 *::-webkit-scrollbar {
   width: 1rem;
