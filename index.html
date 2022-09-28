@@ -22,10 +22,10 @@
         <p>Utilize o formulário para adicionar novas tarefas:</p>
       </div>
       <div class="header__buttons">
-        <button class="header__save button button--accept">
+        <button type="button" class="header__save button button--accept">
           Salvar localStorage
         </button>
-        <button class="header__delete button button--danger">
+        <button type="button" class="header__delete button button--danger">
           Excluir localStorage
         </button>
       </div>
@@ -47,14 +47,12 @@
           <option value="sabado">Sábado</option>
         </select>
         <input type="text" placeholder="12h58m" class="form__input input" />
-        <div class="header__buttons">
-          <button class="header__save button button--accept">
-            Salvar localStorage
-          </button>
-          <button class="header__delete button button--danger">
-            Excluir localStorage
-          </button>
-        </div>
+        <button type="submit" class="header__save button button--accept">
+          Salvar localStorage
+        </button>
+        <button type="button" class="header__delete button button--danger">
+          Excluir localStorage
+        </button>
       </form>
     </main>
   </body>
