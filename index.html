@@ -34,6 +34,28 @@
         <p>27 setembro de 2022</p>
       </div>
     </header>
-    <main></main>
+    <main>
+      <form class="form">
+        <input type="text" placeholder="Atividade" class="form__input input" />
+        <select name="day" id="day" class="form__select input">
+          <option value="domingo">Domingo</option>
+          <option value="segunda">Segunda-feira</option>
+          <option value="terça">Terça-feira</option>
+          <option value="quarta">Quarta-feira</option>
+          <option value="quinta">Quinta-feira</option>
+          <option value="sexta">Sexta-feira</option>
+          <option value="sabado">Sábado</option>
+        </select>
+        <input type="text" placeholder="12h58m" class="form__input input" />
+        <div class="header__buttons">
+          <button class="header__save button button--accept">
+            Salvar localStorage
+          </button>
+          <button class="header__delete button button--danger">
+            Excluir localStorage
+          </button>
+        </div>
+      </form>
+    </main>
   </body>
 </html>
