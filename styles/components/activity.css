@@ -1,0 +1,53 @@
+.activity {
+  display: flex;
+  gap: 1rem;
+}
+
+.activity__time {
+  width: 5.5rem;
+  background-color: var(--transparent-blue);
+  padding: 2rem 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.activity__time--conflict {
+  background-color: var(--transparent-conflict);
+}
+
+.activity__activities {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.activity__activity {
+  width: 530px;
+
+  display: flex;
+  align-items: baseline;
+
+  border-left: 14px solid var(--blue);
+  border-radius: var(--border-radius);
+
+  background-color: #ffffff50;
+
+  padding: 0.8rem;
+  backdrop-filter: blur(6px);
+}
+
+.activity__activity p {
+  line-height: 20px;
+}
+
+.activity__activities--conflict > li {
+  border-left: 14px solid var(--conflict);
+}
+
+.activity__delete {
+  background-color: var(--danger);
+  color: var(--text-secondary);
+  padding: 0.3rem;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
