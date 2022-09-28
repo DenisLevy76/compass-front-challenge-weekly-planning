@@ -1,0 +1,12 @@
+.activities {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+
+  height: 76vh;
+  overflow: scroll;
+
+  padding: 0 1rem;
+  padding-bottom: 2rem;
+}

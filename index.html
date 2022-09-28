@@ -22,7 +22,11 @@
         <p>Utilize o formulário para adicionar novas tarefas:</p>
       </div>
       <div class="header__buttons">
-        <button type="button" class="header__save button button--accept">
+        <button
+          type="button"
+          class="header__save button button--accept"
+          onclick="saveLocalStorage()"
+        >
           Salvar localStorage
         </button>
         <button type="button" class="header__delete button button--danger">
@@ -35,23 +39,60 @@
       </div>
     </header>
     <main>
-      <form class="form">
-        <input type="text" placeholder="Atividade" class="form__input input" />
+      <form class="form" onsubmit="createActivity(event)">
+        <input
+          type="text"
+          placeholder="Atividade"
+          class="form__activity form__input input"
+        />
         <select name="day" id="day" class="form__select input">
-          <option value="domingo">Domingo</option>
-          <option value="segunda">Segunda-feira</option>
-          <option value="terça">Terça-feira</option>
-          <option value="quarta">Quarta-feira</option>
-          <option value="quinta">Quinta-feira</option>
-          <option value="sexta">Sexta-feira</option>
-          <option value="sabado">Sábado</option>
+          <option value="sunday">Domingo</option>
+          <option value="monday">Segunda-feira</option>
+          <option value="tuesday">Terça-feira</option>
+          <option value="wednesday">Quarta-feira</option>
+          <option value="thursday">Quinta-feira</option>
+          <option value="friday">Sexta-feira</option>
+          <option value="saturday">Sábado</option>
         </select>
-        <input type="text" placeholder="12h58m" class="form__input input" />
+        <input
+          type="text"
+          placeholder="12h58m"
+          class="form__time form__input input"
+        />
         <button type="submit" class="header__save button button--accept">
-          Salvar localStorage
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M19 11H13V5C13 4.447 12.552 4 12 4C11.448 4 11 4.447 11 5V11H5C4.448 11 4 11.447 4 12C4 12.553 4.448 13 5 13H11V19C11 19.553 11.448 20 12 20C12.552 20 13 19.553 13 19V13H19C19.552 13 20 12.553 20 12C20 11.447 19.552 11 19 11Z"
+              fill="white"
+            />
+          </svg>
+          Adicionar atividade
         </button>
         <button type="button" class="header__delete button button--danger">
-          Excluir localStorage
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M19 11H13H12.5C12 11 12.552 11 12 11C11.448 11 11.5 11 11.5 11H11H5C4.448 11 4 11.447 4 12C4 12.553 4.448 13 5 13H11C11 13 11.448 13 12 13C12.552 13 13 13 13 13H19C19.552 13 20 12.553 20 12C20 11.447 19.552 11 19 11Z"
+              fill="white"
+            />
+          </svg>
+
+          Excluir Todos
         </button>
       </form>
       <ul class="activities">
@@ -69,5 +110,6 @@
         </li>
       </ul>
     </main>
+    <script src="scripts/home.js"></script>
   </body>
 </html>

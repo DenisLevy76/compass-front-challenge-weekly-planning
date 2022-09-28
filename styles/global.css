@@ -1,6 +1,7 @@
 @import url(reset.css);
 @import url(variables.css);
 @import url(form.css);
+@import url(activitiesList.css);
 
 @import url(components/header.css);
 @import url(components/button.css);
@@ -20,4 +21,34 @@ body {
   background-position: 130% 250%;
 
   height: 100vh;
+}
+
+/* width */
+*::-webkit-scrollbar {
+  width: 1rem;
+  border-radius: 10px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  border-radius: 10px;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: var(--gray-400);
+
+  border: 5px solid var(--bg-color);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: green;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-corner {
+  display: none;
 }
