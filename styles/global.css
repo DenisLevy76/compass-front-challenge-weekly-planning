@@ -29,6 +29,10 @@ main {
   flex: 1;
 }
 
+p {
+  margin: 0;
+}
+
 /* width */
 *::-webkit-scrollbar {
   width: 1rem;
