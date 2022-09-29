@@ -1,0 +1,14 @@
+.nav-tabs {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  scale: 1.1;
+}
