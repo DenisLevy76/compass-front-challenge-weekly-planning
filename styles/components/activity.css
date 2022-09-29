@@ -33,6 +33,7 @@
 
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 
   border-left: 14px solid var(--blue);
   border-radius: var(--border-radius);
