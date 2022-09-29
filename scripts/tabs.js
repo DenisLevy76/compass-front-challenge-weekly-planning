@@ -19,11 +19,13 @@ const styles = {
 };
 
 const navTabs = document.querySelector('.nav-tabs');
+const tabContent = document.querySelector('.tab-content');
 
 daysOfWeek.forEach((day, index) => {
-  const li = document.createElement('li');
-  li.classList.add('nav-item');
-  li.innerHTML = `
+  // tabs
+  const tab = document.createElement('li');
+  tab.classList.add('nav-item');
+  tab.innerHTML = `
   <button
     class="nav-link ${index === 0 ? 'active' : ''}"
     id="${day}-tab"
@@ -38,5 +40,41 @@ daysOfWeek.forEach((day, index) => {
     ${styles[day].translate}
   </button>
 `;
-  navTabs.appendChild(li);
+  navTabs.appendChild(tab);
+
+  // tabs content
+
+  const activities = document.createElement('ul');
+  activities.classList.add('activities');
+
+  try {
+    for (const [key, value] of Object.entries(data.days[day])) {
+      const activity = document.createElement('li');
+      activity.className = 'activity';
+
+      activity.innerHTML = `
+<span class="activity__time">${key}</span>
+<ul class="activity__activities">
+  <li class="activity__activity">
+    <p>
+      ${value}
+    </p>
+    <button type="button" class="activity__delete">Apagar</button>
+  </li>
+</ul>
+`;
+      activities.appendChild(activity);
+      console.log(key, value);
+    }
+  } catch (error) {}
+
+  const tabPane = document.createElement('div');
+  tabPane.className = 'tab-pane fade show';
+  tabPane.setAttribute('id', `${day}-tab-pane`);
+  tabPane.setAttribute('role', `tabpanel`);
+  tabPane.setAttribute('aria-labelledby', `${day}-tab`);
+  tabPane.setAttribute('tabindex', '0');
+  tabPane.appendChild(activities);
+
+  tabContent.appendChild(tabPane);
 });

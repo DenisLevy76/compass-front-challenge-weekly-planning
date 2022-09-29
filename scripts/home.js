@@ -15,6 +15,8 @@ const createActivity = (event) => {
       [time.value]: [activity.value],
     };
   }
+
+  saveLocalStorage(JSON.stringify(data));
 };
 
 const saveLocalStorage = () =>
