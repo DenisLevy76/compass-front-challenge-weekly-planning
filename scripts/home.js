@@ -8,15 +8,24 @@ const createActivity = (event) => {
   event.preventDefault();
 
   try {
-    data.days[day.value][time.value].push(activity.value);
+    data.days[day.value][time.value].push(
+      activity.value.replace(/<[^>]*>?/gm, '')
+    );
   } catch (error) {
     data.days[day.value] = {
       ...data.days[day.value],
-      [time.value]: [activity.value],
+      [time.value]: [activity.value.replace(/<[^>]*>?/gm, '')],
     };
   }
 
   saveLocalStorage(JSON.stringify(data));
+  updateScreen();
+};
+
+const deleteActivity = (day, hour) => {
+  console.log(data);
+  data.days[day][hour] = [];
+  updateScreen();
 };
 
 const saveLocalStorage = () =>
