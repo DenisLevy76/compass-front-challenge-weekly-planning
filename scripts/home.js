@@ -22,9 +22,10 @@ const createActivity = (event) => {
   updateScreen();
 };
 
-const deleteActivity = (day, hour) => {
+const deleteActivity = (day, hour, text) => {
   console.log(data);
-  data.days[day][hour] = [];
+  const elementIndex = data.days[day][hour].indexOf(text);
+  data.days[day][hour][elementIndex] = '';
   updateScreen();
 };
 

@@ -22,15 +22,15 @@ const navTabs = document.querySelector('.nav-tabs');
 const tabContent = document.querySelector('.tab-content');
 
 const createActivityList = (value, day, time) => {
-  let activities = '';
+  let activities = [];
   value.forEach((text) => {
     if (text !== '')
-      activities += `<li class="activity__activity">
+      activities.push(`<li class="activity__activity" style="border-color: ${styles[day].color}">
         <p>
           ${text}
         </p>
-        <button type="button" class="activity__delete" onclick="deleteActivity('${day}', '${time}')">Apagar</button>
-      </li>`;
+        <button type="button" class="activity__delete" onclick="deleteActivity('${day}', '${time}', '${text}')">Apagar</button>
+      </li>`);
   });
   return activities;
 };
@@ -41,16 +41,17 @@ const createActivities = (day) => {
 
   try {
     for (const [key, value] of Object.entries(data.days[day])) {
-      const activity = document.createElement('li');
-      activity.className = 'activity';
-
       const activityList = createActivityList(value, day, key);
+      const activity = document.createElement('li');
+      activity.className = `activity ${
+        activityList.length > 1 ? 'activity--conflict--conflict' : ''
+      }`;
 
       activity.innerHTML = `
 <span class="activity__time">${key}</span>
-<ul class="activity__activities">${activityList}</ul>
+<ul class="activity__activities">${activityList.join('')}</ul>
 `;
-      if (activityList !== '') activities.appendChild(activity);
+      if (activityList.length > 0) activities.appendChild(activity);
     }
   } catch (error) {}
 

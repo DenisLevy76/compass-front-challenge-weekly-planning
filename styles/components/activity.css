@@ -3,16 +3,31 @@
   gap: 1rem;
 }
 
+.activity--conflict--conflict {
+  position: relative;
+}
+
+.activity--conflict--conflict::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: red;
+
+  position: absolute;
+  left: 1%;
+  top: 35%;
+}
+
 .activity--conflict--conflict .activity__time {
   background-color: var(--transparent-conflict);
 }
 
-.activity--conflict--conflict .activity__activities {
-  border-left: 14px solid var(--conflict);
+.activity--conflict--conflict .activity__activities > .activity__activity {
+  border-left: 14px solid var(--conflict) !important;
 }
 
 .activity__time {
-  width: 5.5rem;
+  min-width: 5.5rem;
   background-color: var(--transparent-blue);
   padding: 2rem 0;
   border-radius: 10px;

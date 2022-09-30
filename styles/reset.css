@@ -7,6 +7,7 @@
   vertical-align: baseline;
   box-sizing: border-box;
   text-decoration: none;
+  outline: none;
 }
 article,
 aside,
