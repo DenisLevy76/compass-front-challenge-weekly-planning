@@ -20,6 +20,12 @@ const styles = {
 
 const navTabs = document.querySelector('.nav-tabs');
 const tabContent = document.querySelector('.tab-content');
+let currentTab = daysOfWeek[0];
+
+const handleCurrentTab = (value) => {
+  currentTab = value;
+  console.log(currentTab);
+};
 
 const createActivityList = (value, day, time) => {
   let activities = [];
@@ -85,6 +91,7 @@ const createTab = (day, isActive) => {
     data-bs-toggle="tab"
     data-bs-target="#${day}-tab-pane"
     type="button"
+    onclick="handleCurrentTab('${day}')"
     role="tab"
     aria-controls="${day}-tab-pane"
     aria-selected="true"
@@ -96,18 +103,23 @@ const createTab = (day, isActive) => {
   return tab;
 };
 
-const updateScreen = () => {
+const renderTabs = () => {
   navTabs.innerHTML = '';
-  tabContent.innerHTML = '';
-
   daysOfWeek.forEach((day, index) => {
     // tabs
-    const tab = createTab(day, index === 0);
+    const tab = createTab(day, currentTab === day);
     navTabs.appendChild(tab);
-
-    // tabs content
-    tabContent.appendChild(createTabPane(day, index === 0));
   });
 };
 
+const updateScreen = () => {
+  tabContent.innerHTML = '';
+
+  daysOfWeek.forEach((day) => {
+    // tabs content
+    tabContent.appendChild(createTabPane(day, currentTab === day));
+  });
+};
+
+renderTabs();
 updateScreen();
