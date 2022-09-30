@@ -1,21 +1,21 @@
 const daysOfWeek = [
-  'sunday',
   'monday',
   'tuesday',
   'wednesday',
   'thursday',
   'friday',
   'saturday',
+  'sunday',
 ];
 
 const styles = {
-  sunday: { translate: 'Domingo', color: '#FFA246' },
-  monday: { translate: 'Segunda-feira', color: '#35E185' },
-  tuesday: { translate: 'Terça-feira', color: '#6688FF' },
-  wednesday: { translate: 'Quarta-feira', color: '#B266FF' },
-  thursday: { translate: 'Quinta-feira', color: '#66D1FF' },
-  friday: { translate: 'Sexta-feira', color: '#FF66D4' },
-  saturday: { translate: 'Sábado', color: '#FF6666' },
+  sunday: { translate: 'Domingo', color: '#FF6666' },
+  monday: { translate: 'Segunda-feira', color: '#FFA246' },
+  tuesday: { translate: 'Terça-feira', color: '#35E185' },
+  wednesday: { translate: 'Quarta-feira', color: '#6688FF' },
+  thursday: { translate: 'Quinta-feira', color: '#B266FF' },
+  friday: { translate: 'Sexta-feira', color: '#66D1FF' },
+  saturday: { translate: 'Sábado', color: '#FF66D4' },
 };
 
 const navTabs = document.querySelector('.nav-tabs');
@@ -23,13 +23,13 @@ const tabContent = document.querySelector('.tab-content');
 
 const createActivityList = (value, day, time) => {
   let activities = [];
-  value.forEach((text) => {
+  value.forEach((text, index) => {
     if (text !== '')
       activities.push(`<li class="activity__activity" style="border-color: ${styles[day].color}">
         <p>
           ${text}
         </p>
-        <button type="button" class="activity__delete" onclick="deleteActivity('${day}', '${time}', '${text}')">Apagar</button>
+        <button type="button" class="activity__delete" onclick="deleteActivity('${day}', '${time}', '${index}')">Apagar</button>
       </li>`);
   });
   return activities;
@@ -48,7 +48,9 @@ const createActivities = (day) => {
       }`;
 
       activity.innerHTML = `
-<span class="activity__time">${key}</span>
+<span class="activity__time" style="background-color: ${
+        styles[day].color
+      }40">${key}</span>
 <ul class="activity__activities">${activityList.join('')}</ul>
 `;
       if (activityList.length > 0) activities.appendChild(activity);

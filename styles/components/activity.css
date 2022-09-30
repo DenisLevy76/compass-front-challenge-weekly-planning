@@ -19,7 +19,7 @@
 }
 
 .activity--conflict--conflict .activity__time {
-  background-color: var(--transparent-conflict);
+  background-color: var(--transparent-conflict) !important;
 }
 
 .activity--conflict--conflict .activity__activities > .activity__activity {
