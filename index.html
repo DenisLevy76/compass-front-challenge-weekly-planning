@@ -62,11 +62,7 @@
           <option value="friday">Sexta-feira</option>
           <option value="saturday">Sábado</option>
         </select>
-        <input
-          type="text"
-          placeholder="12h58m"
-          class="form__time form__input input"
-        />
+        <select type="text" class="form__time form__input input"></select>
         <button type="submit" class="header__save button button--accept">
           <svg
             width="24"
@@ -84,7 +80,11 @@
           </svg>
           Adicionar atividade
         </button>
-        <button type="button" class="header__delete button button--danger">
+        <button
+          type="button"
+          class="header__delete button button--danger"
+          onclick="deleteCurrentDay()"
+        >
           <svg
             width="24"
             height="24"
