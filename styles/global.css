@@ -56,7 +56,7 @@ p {
 
 /* Handle on hover */
 *::-webkit-scrollbar-thumb:hover {
-  background: green;
+  background: var(--gray-600);
   border-radius: 10px;
 }
 
