@@ -113,6 +113,7 @@ const renderTabs = () => {
 };
 
 const updateScreen = () => {
+  console.log('adowaidjaio');
   tabContent.innerHTML = '';
 
   daysOfWeek.forEach((day) => {

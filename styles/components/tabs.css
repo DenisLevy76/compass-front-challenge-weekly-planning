@@ -1,6 +1,7 @@
 .nav-tabs {
   display: flex;
   gap: 2rem;
+  padding: 0 1rem;
 }
 
 .nav-link {
@@ -9,6 +10,11 @@
   font-size: 1rem;
 }
 
-.nav-link:hover {
-  scale: 1.1;
+.nav-link:hover:not(.active) {
+  transform: scale(1.1) translateY(-1px);
+}
+
+.nav-link.active {
+  transform: scale(1.2) translateY(-2px);
+  border: none;
 }

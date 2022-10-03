@@ -18,15 +18,20 @@ const createActivity = (event) => {
     };
   }
 
-  saveLocalStorage(JSON.stringify(data));
   updateScreen();
 };
 
 const deleteActivity = (day, hour, index) => {
-  console.log(data);
   data.days[day][hour][index] = '';
   updateScreen();
 };
 
-const saveLocalStorage = () =>
+const saveLocalStorage = () => {
   localStorage.setItem('data', JSON.stringify(data));
+  updateScreen();
+};
+
+const resetLocalStorage = () => {
+  localStorage.clear();
+  updateScreen();
+};
