@@ -41,6 +41,7 @@
 
 .header__time > strong {
   font-size: var(--text-heading1);
+  font-weight: 400;
 }
 
 .header__time > p {

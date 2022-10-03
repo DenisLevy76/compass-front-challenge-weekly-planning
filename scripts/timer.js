@@ -1,5 +1,6 @@
 const date = new Date();
 const hour = document.querySelector('.header__time strong');
+const today = document.querySelector('.header__time p');
 
 const padNumber = (number) => {
   return number.toString().padStart(2, '0');
@@ -11,4 +12,10 @@ const showHour = () => {
   )}`;
 };
 
+const showDate = () => {
+  moment.locale('pt-BR');
+  today.innerText = moment().format('D [de] MMMM [de] YYYY');
+};
+
 showHour();
+showDate();
