@@ -53,13 +53,6 @@
   justify-content: center;
 }
 
-.activity__time.on-top {
-  position: sticky;
-  left: 1rem;
-  top: 0;
-  z-index: 1;
-}
-
 .activity__activities {
   display: flex;
   gap: 1.2rem;
@@ -89,7 +82,7 @@
   line-height: 22px;
   max-width: 82%;
   word-break: break-all;
-  max-height: 54px;
+  max-height: 66px;
   overflow-x: auto;
 }
 
