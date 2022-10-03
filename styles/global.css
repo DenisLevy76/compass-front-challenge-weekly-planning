@@ -63,3 +63,8 @@ p {
 *::-webkit-scrollbar-corner {
   display: none;
 }
+
+.Flipped {
+  transform: rotateX(180deg);
+  margin-top: 1rem;
+}

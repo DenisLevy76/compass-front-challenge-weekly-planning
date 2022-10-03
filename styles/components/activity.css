@@ -9,13 +9,15 @@
 
 .activity--conflict--conflict::after {
   content: '';
-  width: 100%;
+  width: 99%;
   height: 4px;
   background-color: var(--conflict);
 
   position: absolute;
   left: 1%;
   top: 25%;
+
+  border-radius: 4px;
 }
 
 .activity--conflict--conflict::before {
@@ -49,6 +51,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.activity__time.on-top {
+  position: sticky;
+  left: 1rem;
+  top: 0;
+  z-index: 1;
 }
 
 .activity__activities {

@@ -23,7 +23,7 @@
 .tab-line {
   display: flex;
   gap: 2rem;
-  align-items: flex-start;
+  align-items: flex-end;
   padding: 0 1rem;
 }
 .tab-line__times {
