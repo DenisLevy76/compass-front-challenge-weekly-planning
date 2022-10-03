@@ -1,4 +1,5 @@
 const activity = document.querySelector('.form__activity');
+const inputErrorMessage = document.querySelector('.input--invalid__message');
 const day = document.querySelector('.form__select');
 const time = document.querySelector('.form__time');
 
@@ -13,6 +14,15 @@ const createTimeSelectOption = (value, label = '') => {
 
 const createActivity = (event) => {
   event.preventDefault();
+
+  if (!activity.value) {
+    activity.classList.add('invalid');
+    inputErrorMessage.classList.add('input--invalid__message--active');
+    return;
+  } else {
+    inputErrorMessage.classList.remove('input--invalid__message--active');
+    activity.classList.remove('invalid');
+  }
 
   try {
     data.days[day.value][time.value].push(

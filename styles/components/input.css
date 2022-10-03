@@ -5,3 +5,18 @@
   border: 1px solid var(--accept);
   border-radius: 10px;
 }
+
+.input.invalid {
+  border: 1px solid var(--danger);
+}
+
+.input--invalid__message {
+  position: absolute;
+  visibility: hidden;
+  margin-top: 0.5rem;
+  color: var(--danger);
+}
+
+.input--invalid__message--active {
+  visibility: initial;
+}

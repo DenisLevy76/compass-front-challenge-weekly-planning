@@ -25,6 +25,7 @@
   gap: 2rem;
   align-items: flex-end;
   padding: 0 1rem;
+  margin-top: 1rem;
 }
 .tab-line__times {
   min-width: 5.5rem;

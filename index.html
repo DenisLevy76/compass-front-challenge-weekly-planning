@@ -48,11 +48,15 @@
     </header>
     <main>
       <form class="form" onsubmit="createActivity(event)">
-        <input
-          type="text"
-          placeholder="Atividade"
-          class="form__activity form__input input"
-        />
+        <fieldset>
+          <input
+            type="text"
+            placeholder="Atividade"
+            name="activity"
+            class="form__activity form__input input"
+          />
+          <p class="input--invalid__message">Campo inválido</p>
+        </fieldset>
         <select name="day" id="day" class="form__select input">
           <option value="sunday">Domingo</option>
           <option value="monday">Segunda-feira</option>
@@ -62,7 +66,7 @@
           <option value="friday">Sexta-feira</option>
           <option value="saturday">Sábado</option>
         </select>
-        <select type="text" class="form__time form__input input"></select>
+        <select class="form__time form__input input" name="time"></select>
         <button type="submit" class="header__save button button--accept">
           <svg
             width="24"
