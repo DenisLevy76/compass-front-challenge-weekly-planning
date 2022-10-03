@@ -19,3 +19,8 @@ const showDate = () => {
 
 showHour();
 showDate();
+
+const timer = setInterval(() => {
+  showDate();
+  showHour();
+}, 60 * 1000); // 60 secs
