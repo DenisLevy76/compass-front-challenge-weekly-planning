@@ -54,7 +54,7 @@ const createActivities = (day) => {
       }`;
 
       activity.innerHTML = `
-<span class="activity__time" style="background-color: ${
+<span class="activity__time absolute" style="background-color: ${
         styles[day].color
       }40">${hours}</span>
 <ul class="activity__activities">${activityList.join('')}</ul>

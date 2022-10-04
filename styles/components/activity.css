@@ -1,6 +1,5 @@
 .activity {
   display: flex;
-  gap: 1rem;
 }
 
 .activity--conflict--conflict {
@@ -18,6 +17,8 @@
   top: 25%;
 
   border-radius: 4px;
+
+  z-index: 3;
 }
 
 .activity--conflict--conflict::before {
@@ -26,11 +27,11 @@
   height: 18px;
   border-radius: 50%;
   background-color: var(--conflict);
+  z-index: 3;
 
   position: absolute;
   left: 0.8%;
   top: 16%;
-  z-index: 1;
 }
 
 .activity--conflict--conflict .activity__time {
@@ -51,6 +52,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.absolute {
+  position: sticky;
+  left: 1rem;
+  top: 0;
+  z-index: 2;
+  backdrop-filter: blur(6px);
 }
 
 .white {
@@ -80,6 +89,7 @@
 
   padding: 0.8rem;
   backdrop-filter: blur(6px);
+  z-index: 1;
 }
 
 .activity__activity p {
@@ -87,7 +97,6 @@
   max-width: 82%;
   word-break: break-all;
   max-height: 66px;
-  overflow-x: auto;
 }
 
 .activity__delete {
