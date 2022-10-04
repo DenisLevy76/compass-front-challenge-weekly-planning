@@ -24,11 +24,11 @@ let currentTab = daysOfWeek[0];
 
 const handleCurrentTab = (value) => {
   currentTab = value;
-  console.log(currentTab);
 };
 
 const createActivityList = (value, day, time) => {
   let activities = [];
+
   value.forEach((text, index) => {
     if (text !== '')
       activities.push(`<li class="activity__activity" style="border-color: ${styles[day].color}">
@@ -46,8 +46,8 @@ const createActivities = (day) => {
   activities.classList.add('activities');
 
   try {
-    for (const [key, value] of Object.entries(data.days[day])) {
-      const activityList = createActivityList(value, day, key);
+    for (const [hours, value] of Object.entries(data.days[day]).sort()) {
+      const activityList = createActivityList(value, day, hours);
       const activity = document.createElement('li');
       activity.className = `activity ${
         activityList.length > 1 ? 'activity--conflict--conflict' : ''
@@ -56,7 +56,7 @@ const createActivities = (day) => {
       activity.innerHTML = `
 <span class="activity__time" style="background-color: ${
         styles[day].color
-      }40">${key}</span>
+      }40">${hours}</span>
 <ul class="activity__activities">${activityList.join('')}</ul>
 `;
       if (activityList.length > 0) activities.appendChild(activity);
@@ -113,7 +113,6 @@ const renderTabs = () => {
 };
 
 const updateScreen = () => {
-  console.log('adowaidjaio');
   tabContent.innerHTML = '';
 
   daysOfWeek.forEach((day) => {

@@ -35,8 +35,6 @@ const createActivity = (event) => {
     };
   }
 
-  console.log(data);
-
   updateScreen();
 };
 
