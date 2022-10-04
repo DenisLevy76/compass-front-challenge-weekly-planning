@@ -27,6 +27,8 @@
 }
 
 .tab-content {
-  overflow: scroll;
+  min-height: 200vh;
+  min-width: 150vh;
+  overflow-x: scroll;
   padding: 1rem 0;
 }
